@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="logo"></div>
+        <input type="text" name="" id="city" placeholder="Enter City Name"><br>
+        <a href="#weather"><button type="submit" id="btn_weather" class="btn btn-danger" onclick="getWeather()">Get
+                Weather</button></a>
+
+        <h2 class="weather" id="weather">Weather</h2>
+        <h4 class="feel" id="feel">Feels Like:</h4>
+        <h4 class="temp" id="temp">Temprature:</h4>
+        <h4 class="humid" id="humid">Humidity:</h4>
+
+        <h2 class="wind" id="wind">Wind</h2>
+        <h4 class="speed" id="speed">Speed:</h4>
+        <h4 class="deg" id="deg">Deg:</h4>
+
+        <h2 class="location" id="location">Location</h2>
+        <h2 class="lon" id="lon">Lon:</h2>
+        <h2 class="lat" id="lat">Lat:</h2>
+
+    </div>
+    <style>
+        body {
+            overflow-x: hidden;
+            text-align: center;
+        }
+
+        input {
+            border-radius: 3px;
+            padding-left: 10px;
+            color: white;
+            border: none;
+            background-color: rgb(221, 59, 59);
+            outline: none;
+            position: absolute;
+            top: 330px;
+            left: 480px;
+            width: 400px;
+            height: 40px;
+        }
+
+        input::placeholder {
+            color: white;
+            font-size: 17px;
+        }
+
+        .weather {
+            color: white;
+            font-size: 42px;
+            position: absolute;
+            top: 620px;
+            left: 150px;
+        }
+
+        .temp {
+            color: white;
+            font-size: 32px;
+            position: absolute;
+            top: 722px;
+            left: 155px;
+        }
+
+        .feel {
+            color: white;
+            font-size: 32px;
+            position: absolute;
+            top: 680px;
+            left: 155px;
+        }
+
+        .humid {
+            color: white;
+            font-size: 32px;
+            position: absolute;
+            top: 765px;
+            left: 155px;
+        }
+
+        .wind {
+            color: white;
+            font-size: 42px;
+            position: absolute;
+            top: 820px;
+            left: 150px;
+        }
+
+        .speed {
+            color: white;
+            font-size: 32px;
+            position: absolute;
+            top: 875px;
+            left: 155px;
+        }
+
+        .lat {
+            color: white;
+            font-size: 32px;
+            position: absolute;
+            top: 1050px;
+            left: 155px;
+        }
+
+        .lon {
+            color: white;
+            font-size: 32px;
+            position: absolute;
+            top:1010px;
+            left: 155px;
+        }
+
+        .deg {
+            color: white;
+            font-size: 32px;
+            position: absolute;
+            top: 915px;
+            left: 155px;
+        }
+
+        .location {
+            color: white;
+            font-size: 42px;
+            position: absolute;
+            top: 960px;
+            left: 155px;
+        }
+
+        button {
+            position: absolute;
+            top: 380px;
+            left: 480px;
+            width: 400px;
+            height: 40px;
+        }
+
+        .bg {
+            width: 100vw;
+            height: 190vh;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: url("bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .logo {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: 50px;
+            left: 540px;
+            background: url("logo.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</body>
+<script src="Ajax.js"></script>
+
+</html>
